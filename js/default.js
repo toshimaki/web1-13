@@ -11,6 +11,7 @@ return[sec, min, hours, days, month, year];
 var update = function(){
 var now = new Date();
 var counter = separate_time(now);
+  document.getElementById('countdown').textContent=
 document.getElementById('form').select.onchange = function(){
   location.href = document.getElementById('form').select.value;
 }
