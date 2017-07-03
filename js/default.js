@@ -37,6 +37,16 @@ function getFileName() {
   return window.location.href.split('/').pop();
 }
 
+var last_date = getCookie('lastDate');
+if(last_date){
+  document.getElementById('cookie').textContent = '前回訪れた時間:' + last_date;
+}else{
+  document.getElementById('cookie').textContent = 'はじめまして';
+}
+
+var current_time = Date();
+setCookie('lastDate',current_time.toString(),7);
+
 var filename = getFileName();
 var opt;
 if(filename === 'other.html'){
